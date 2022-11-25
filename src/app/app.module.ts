@@ -7,6 +7,7 @@ import { AgregarParteComponent } from './componentes/agregar-parte/agregar-parte
 import { EditarParteComponent } from './componentes/editar-parte/editar-parte.component';
 import { ListarParteComponent } from './componentes/listar-parte/listar-parte.component';
 import { ImprimirParteComponent } from './componentes/imprimir-parte/imprimir-parte.component';
+import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ImprimirParteComponent } from './componentes/imprimir-parte/imprimir-pa
     AgregarParteComponent,
     EditarParteComponent,
     ListarParteComponent,
-    ImprimirParteComponent
+    ImprimirParteComponent,
+    IniciarSesionComponent
   ],
   imports: [
     BrowserModule,
