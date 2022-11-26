@@ -3,14 +3,16 @@
         Agregar Partes
     </div>
     <div class="card-body">
-        <form action="">
+        <form [formGroup]="formularioParte" (ngSubmit)="enviarDatos()">
+
             <div class="mb-3">
               <label for="" class="form-label">Nombre</label>
               <input type="text"
-                class="form-control" name="" id="" aria-describedby="helpId" placeholder="Escribe un nombre">
+                class="form-control" name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Escribe un nombre">
               <small id="helpId" class="form-text text-muted">Help text</small>
             </div>
-            <span class="badge bg-success">Agregar</span>
+
+            <button type="submit" class="badge bg-success">Agregar</button>
             <span class="badge bg-info">Cancelar</span>
         </form>
     </div>

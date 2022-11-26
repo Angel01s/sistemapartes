@@ -9,6 +9,9 @@ import { ListarParteComponent } from './componentes/listar-parte/listar-parte.co
 import { ImprimirParteComponent } from './componentes/imprimir-parte/imprimir-parte.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,10 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

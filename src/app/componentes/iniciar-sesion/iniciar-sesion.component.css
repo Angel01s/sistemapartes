@@ -2,9 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
-html,body{
+body{
 background-image: url('https://fondosmil.com/fondo/74544.jpg');
-background-size: cover;
+background-size: contain;
 background-repeat: no-repeat;
 height: 100%;
 font-family: 'Numans', sans-serif;
