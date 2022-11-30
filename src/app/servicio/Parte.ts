@@ -1,6 +1,6 @@
 export class Parte{
     ID!: string;
-    SE!: string;
+    NE!: string;
     DIA!: string;
     MES!: string;
     SHORA!: string;
@@ -30,7 +30,7 @@ export class Parte{
     DTTOE!: string;
     TRASLDE!: string;
     MEDICORE!: string;
-    ACOMPÑ!: string;
+    ACOMP!: string;
     DNI!: string;
     PARENT!: string;
     PERSH!: string;
@@ -50,4 +50,5 @@ export class Parte{
     TRATR!: string;
     MATERIALU!: string;
     OBSP!: string;
+    OADD!: string;
 }

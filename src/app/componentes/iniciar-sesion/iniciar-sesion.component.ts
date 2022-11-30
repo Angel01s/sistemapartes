@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./iniciar-sesion.component.css']
 })
 export class IniciarSesionComponent {
+  ngOnInit():void {
 
+  }
 }
