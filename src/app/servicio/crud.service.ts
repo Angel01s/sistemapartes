@@ -9,6 +9,6 @@ export class CrudService {
   API: string ='https://bdp1.000webhostapp.com/'
   constructor(private clientHttp:HttpClient) { }
   AgregarParte(datosParte:Parte):Observable<any>{
-    return this.clientHttp.post(this.API+"?parte=",datosParte);
+    return this.clientHttp.post(this.API+"parte",datosParte);
   }
 }
