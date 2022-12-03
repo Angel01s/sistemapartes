@@ -6,11 +6,29 @@
         <form [formGroup]="formularioUsuario" (ngSubmit)="enviarDatos()">
 
             <div class="mb-3">
-              <label for="" class="form-label">Numero de parte</label>
+              <label for="" class="form-label">CODIGO</label>
               <input type="text"
                 class="form-control" name="" formControlName="CODIGO" id="" aria-describedby="helpId" placeholder="Escribe un nombre">
               <small id="helpId" class="form-text text-muted">Help text</small>
             </div>
+            <div class="mb-3">
+                <label for="" class="form-label">CONTRASENIA</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="CONTRASENIA" id="" aria-describedby="helpId" placeholder="Escribe un nombre">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">PERMISOID</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="PERMISOID" id="" aria-describedby="helpId" placeholder="Escribe un nombre">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">NOMBRES</label>
+                <input type="text"
+                  class="form-control" name="" formControlName="NOMBRES" id="" aria-describedby="helpId" placeholder="Escribe un nombre">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+              </div>
 
             <button type="submit" class="badge bg-success">Agregar</button>
             <span class="badge bg-info">Cancelar</span>
