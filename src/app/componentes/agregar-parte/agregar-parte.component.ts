@@ -15,7 +15,7 @@ export class AgregarParteComponent {
     )
   {
     this.formularioParte=this.formulario.group({
-      NE:['']
+      'CODIGO':['']
     })
   }
   
