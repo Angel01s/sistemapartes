@@ -7,7 +7,7 @@ describe('AgregarParteComponent', () => {
   let fixture: ComponentFixture<AgregarParteComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
+    await TestBed.configureTestingModule({ 
       declarations: [ AgregarParteComponent ]
     })
     .compileComponents();

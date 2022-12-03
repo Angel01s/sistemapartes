@@ -5,7 +5,7 @@ import { CrudService } from 'src/app/servicio/crud.service';
 @Component({
   selector: 'app-agregar-parte',
   templateUrl: './agregar-parte.component.html',
-  styleUrls: ['./agregar-parte.component.css']
+  styleUrls: ['./agregar-parte.component.css'] 
 })
 export class AgregarParteComponent {
   formularioParte:FormGroup;

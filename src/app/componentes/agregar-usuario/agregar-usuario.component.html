@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-header">
+        Agregar Partes
+    </div>
+    <div class="card-body">
+        <form [formGroup]="formularioUsuario" (ngSubmit)="enviarDatos()">
+
+            <div class="mb-3">
+              <label for="" class="form-label">Numero de parte</label>
+              <input type="text"
+                class="form-control" name="" formControlName="CODIGO" id="" aria-describedby="helpId" placeholder="Escribe un nombre">
+              <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+
+            <button type="submit" class="badge bg-success">Agregar</button>
+            <span class="badge bg-info">Cancelar</span>
+        </form>
+    </div>
+    
+</div>

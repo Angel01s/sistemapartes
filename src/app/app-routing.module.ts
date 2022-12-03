@@ -6,6 +6,7 @@ import { EditarParteComponent } from './componentes/editar-parte/editar-parte.co
 import { ImprimirParteComponent } from './componentes/imprimir-parte/imprimir-parte.component';
 import { ListarParteComponent } from './componentes/listar-parte/listar-parte.component';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { AgregarUsuarioComponent } from './componentes/agregar-usuario/agregar-usuario.component';
 
 const routes: Routes = [
 
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'agregar-parte', component: AgregarParteComponent},
   {path: 'listar-parte', component: ListarParteComponent},
   {path: 'editar-parte/:id', component: EditarParteComponent},
-  {path: 'imprimir-parte/:id', component: ImprimirParteComponent}
+  {path: 'imprimir-parte/:id', component: ImprimirParteComponent},
+  {path: 'agregar-usuario', component: AgregarUsuarioComponent}
 
 ];
 
