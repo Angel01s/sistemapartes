@@ -14,12 +14,17 @@ export class AgregarUsuarioComponent {
     )
   {
     this.formularioUsuario=this.formulario.group({
-      'NE':['']
+      CODIGO:[''],
+      CONTRASENIA:[''],
+      PERMISOID:[''],
+      NOMBRES:['']
     })
   }
-  
+  ngOnInit(): void{
+
+  }
   enviarDatos():any{
-    console.log('SIU SIU PAPUUUUUUUUUUUUUU');
+    console.log('SIUUU SALIOO');
     console.log(this.formularioUsuario.value);
     this.crudService.AgregarParte(this.formularioUsuario.value).subscribe();
   }
