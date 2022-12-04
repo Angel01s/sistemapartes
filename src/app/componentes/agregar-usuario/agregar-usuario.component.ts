@@ -14,10 +14,7 @@ export class AgregarUsuarioComponent {
     )
   {
     this.formularioUsuario=this.formulario.group({
-      'CODIGO':[''],
-      'CONTRASENIA':[''],
-      'PERMISOID':[''],
-      'NOMBRES':['']
+      'NE':['']
     })
   }
   
