@@ -6,7 +6,7 @@ import { Parte } from './Parte';
   providedIn: 'root'
 })
 export class CrudService {
-  API: string ='https://bdp1.000webhostapp.com/add.php'
+  API: string ='http://bdp1.000webhostapp.com/add.php'
   constructor(private clientHttp:HttpClient) { }
   AgregarParte(datosParte:Parte):Observable<any>{
     return this.clientHttp.post(this.API,datosParte);
