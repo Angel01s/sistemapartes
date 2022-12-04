@@ -3,7 +3,7 @@ export class Parte{
     /* NE!: string; */
     CODIGO!: string;
     CONTRASENIA!: string;
-    PERMISOID!: string;
+    PERMISOID!: Number;
     NOMBRES!: string;
     /* DIA!: string;
     MES!: string;

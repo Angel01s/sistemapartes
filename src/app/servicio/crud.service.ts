@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Parte } from './Parte';
+const API = 'http://bdp1.000webhostapp.com'
 @Injectable({
   providedIn: 'root'
 })
 export class CrudService {
-  API: string ='http://bdp1.000webhostapp.com/add.php/'
-  constructor(private clientHttp:HttpClient) { }
-  AgregarParte(datosParte:Parte):Observable<any>{
-    return this.clientHttp.post(this.API+"?usuario=1",datosParte);
+
+  constructor(private clientHttp: HttpClient) { }
+
+  AgregarParte(CODIGO: string, CONTRASENIA: string, PERMISOID: number, NOMBRES: string) {
+    return this.clientHttp.post(`${API}/add.php`, {CODIGO, CONTRASENIA, PERMISOID, NOMBRES});
   }
 }
