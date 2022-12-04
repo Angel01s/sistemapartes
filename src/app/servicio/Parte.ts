@@ -1,7 +1,7 @@
 export class Parte{
-    ID!: string;
+    /* ID!: string; */
     NE!: string;
-    DIA!: string;
+    /* DIA!: string;
     MES!: string;
     SHORA!: string;
     IHORA!: string;
@@ -50,5 +50,5 @@ export class Parte{
     TRATR!: string;
     MATERIALU!: string;
     OBSP!: string;
-    OADD!: string;
+    OADD!: string; */
 }
