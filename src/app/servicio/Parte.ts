@@ -1,6 +1,10 @@
 export class Parte{
     /* ID!: string; */
-    NE!: string;
+    /* NE!: string; */
+    CODIGO!: string;
+    CONTRASENIA!: string;
+    PERMISOID!: string;
+    NOMBRES!: string;
     /* DIA!: string;
     MES!: string;
     SHORA!: string;
