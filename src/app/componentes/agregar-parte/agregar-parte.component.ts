@@ -21,7 +21,5 @@ export class AgregarParteComponent {
   
   enviarDatos():any{
     console.log('SIUUUUUUUUUUUUU');
-    console.log(this.formularioParte.value);
-    this.crudService.AgregarParte(this.formularioParte.value).subscribe();
   }
 }

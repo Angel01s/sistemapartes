@@ -8,13 +8,12 @@ interface Usuario{CODIGO:string, CONTRASENIA: string, PERMISOID: number, NOMBRES
   styleUrls: ['./agregar-usuario.component.css']
 })
 export class AgregarUsuarioComponent implements OnInit{
-
+  
   constructor(
     private crudService:CrudService,
     private fb:FormBuilder
-    )
-  {}
-  validateForm:FormGroup
+    ) {}
+
   ngOnInit(): void{
     this.validateForm=this.fb.group({
       CODIGO:[null,[Validators.required]],
@@ -23,6 +22,7 @@ export class AgregarUsuarioComponent implements OnInit{
       NOMBRES:[null,[Validators.required]]
     })
   }
+  validateForm!:FormGroup;
   submitForm():void{
     for (const i in this.validateForm.controls) {
       this.validateForm.controls[i].markAsDirty();
@@ -32,5 +32,18 @@ export class AgregarUsuarioComponent implements OnInit{
   }
   enviarDatos():void{
     console.log("SIUUUUUUUUUUUUU");
+    const CODIGO = this.validateForm.value.CODIGO;
+    const CONTRASENIA = this.validateForm.value.CONTRASENIA;
+    const PERMISOID = this.validateForm.value.PERMISOID;
+    const NOMBRES = this.validateForm.value.NOMBRES;
+    console.log(CODIGO + " " + CONTRASENIA + " " + PERMISOID + " " + NOMBRES);
+    this.crudService.AgregarParte(CODIGO, CONTRASENIA, PERMISOID, NOMBRES).subscribe();/* {
+      next: resp => {
+        console.log(resp);
+      },
+      error: err => {
+        console.log(err);
+      } 
+    }*/
   }
 }
