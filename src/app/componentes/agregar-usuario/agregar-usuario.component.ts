@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CrudService } from 'src/app/servicio/crud.service';
+import { Router } from '@angular/router';
 interface Usuario{CODIGO:string, CONTRASENIA: string, PERMISOID: number, NOMBRES: string}
 @Component({
   selector: 'app-agregar-usuario',
@@ -11,7 +12,8 @@ export class AgregarUsuarioComponent implements OnInit{
   
   constructor(
     private crudService:CrudService,
-    private fb:FormBuilder
+    private fb:FormBuilder,
+    private ruteador:Router
     ) {}
 
   ngOnInit(): void{
@@ -29,7 +31,7 @@ export class AgregarUsuarioComponent implements OnInit{
       this.validateForm.controls[i].updateValueAndValidity();
     }
     console.log(this.validateForm.value);
-  }
+  } 
   enviarDatos():void{
     console.log("SIUUUUUUUUUUUUU");
     const CODIGO = this.validateForm.value.CODIGO;
@@ -40,10 +42,11 @@ export class AgregarUsuarioComponent implements OnInit{
     this.crudService.AgregarParte(CODIGO, CONTRASENIA, PERMISOID, NOMBRES).subscribe();/* {
       next: resp => {
         console.log(resp);
-      },
+      }, 
       error: err => {
         console.log(err);
       } 
     }*/
+    /* this.ruteador.navigateByUrl('listar-usuarios') */
   }
 }

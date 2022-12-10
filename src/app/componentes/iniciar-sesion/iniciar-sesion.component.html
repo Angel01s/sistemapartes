@@ -1,48 +1,57 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<!--Bootsrap 4 CDN-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-    <!--Fontawesome CDN-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-</head>
 <body>
-    <br>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/9b780a57e4.js" crossorigin="anonymous"></script>
+  <!-- <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <div class="nav navbar-nav" style="width: 400px; display:flex; justify-content:space-between; padding-left: 18px">
+          <a class="nav-item nav-link active" href="#" aria-current="page">Inicio</a>
+          <a class="nav-item nav-link active" routerLink="listar-parte" >Partes</a>
+          <a class="nav-item nav-link active" routerLink="listar-usuarios">Usuarios</a>
+      </div>
+  </nav> -->
+    
     <div class="container">
         <div class="d-flex justify-content-center h-100">
             <div class="card">
                 <div class="card-header">
                     <h3>Iniciar Sesion</h3>
                     <div class="d-flex justify-content-end social_icon">
-                        <span><i class="fab fa-facebook-square"></i></span>
-                        <span><i class="fab fa-google-plus-square"></i></span>
-                        <span><i class="fab fa-twitter-square"></i></span>
+                        <span><a target="_blank" href="https://www.facebook.com/BomberosNSG128"><i class="fab fa-facebook-square"></i></a></span>
+                        <span><a target="_blank" href="https://www.tiktok.com/@bomberos128guadalupe?_r=1&_d=dj47i709554761&language=es&sec_uid=MS4wLjABAAAARbsZNDAVTf9dnIGy7NIp3WIaEQiPVFZmSQ9PhtJKmraVlhPGqHnPt_9hqzaQ8171&share_author_id=7118016302882718726&source=h5_m&u_code=e2icgij2g057l2&timestamp=1670458449&user_id=7118016302882718726&sec_user_id=MS4wLjABAAAARbsZNDAVTf9dnIGy7NIp3WIaEQiPVFZmSQ9PhtJKmraVlhPGqHnPt_9hqzaQ8171&utm_source=whatsapp&utm_campaign=client_share&utm_medium=android&share_iid=7173506147894511366&share_link_id=34bc1b79-f1f5-456a-940d-73d7cc906450&share_app_id=1233&ugbiz_name=Account&ug_btm=b8727"><i class="fa-brands fa-tiktok"></i></a></span>
                     </div>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form [formGroup]="validateForm" (ngSubmit)="submitForm()">
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Escriba su codigo">
+                            <input formControlName="CODIGO" type="text" class="form-control" placeholder="Escriba su codigo">
                             
                         </div>
+                        <br>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="Escriba su contraseña">
+                            <input formControlName="CONTRASENIA" type="password" class="form-control" placeholder="Escriba su contraseña">
                         </div>
+                        <br>
+                        
                         <div class="form-group">
-                            <input type="submit" value="Login" class="btn float-right login_btn" routerLink="listar-parte">
+                            <button type="button" value="Login" class="btn float-right login_btn" (click)="enviarDatosSesion()">Login</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+
+  <script src="https://kit.fontawesome.com/9b780a57e4.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
-</html>

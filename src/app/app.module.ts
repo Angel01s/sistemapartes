@@ -12,6 +12,7 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AgregarUsuarioComponent } from './componentes/agregar-usuario/agregar-usuario.component';
+import { ListarUsuariosComponent } from './componentes/listar-usuarios/listar-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AgregarUsuarioComponent } from './componentes/agregar-usuario/agregar-u
     ListarParteComponent,
     ImprimirParteComponent,
     IniciarSesionComponent,
-    AgregarUsuarioComponent
+    AgregarUsuarioComponent,
+    ListarUsuariosComponent
   ],
   imports: [
     BrowserModule,
